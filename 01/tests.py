@@ -45,7 +45,8 @@ class TestGame(unittest.TestCase):
         self.assertEqual(self.get_stdout(-3).getvalue(), exceptions[2])
         self.assertEqual(self.get_stdout(-4).getvalue(), exceptions[3])
 
-    def get_stdout(self, err):
+    @staticmethod
+    def get_stdout(err):
         game = TicTacGame()
         captured_output = io.StringIO()
         sys.stdout = captured_output

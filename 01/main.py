@@ -68,7 +68,8 @@ class TicTacGame:
     def equal(self, index):
         return self.cells[index] == self.move
 
-    def print_err(self, err_num):
+    @staticmethod
+    def print_err(err_num):
         match err_num:
             case -1:
                 print("Неверное количество символов")
