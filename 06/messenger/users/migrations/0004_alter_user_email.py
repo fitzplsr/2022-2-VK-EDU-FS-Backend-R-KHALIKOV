@@ -6,13 +6,13 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('chats', '0003_alter_chat_users'),
+        ('users', '0003_auto_20221113_2136'),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='message',
-            name='creating_time',
-            field=models.TimeField(auto_now_add=True, verbose_name='Время отправки'),
+            model_name='user',
+            name='email',
+            field=models.EmailField(blank=True, max_length=254, verbose_name='email address'),
         ),
     ]
